@@ -35,16 +35,34 @@
       font-weight: 400;
       letter-spacing: 1.2px;
     }
-    nav {
+    .contact-info {
       background: #003f6d;
+      color: white;
+      padding: 10px 20px;
       text-align: center;
-      padding: 15px 0;
+      font-size: 1em;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .contact-info a {
+      color: #ffd700;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+    }
+    .contact-info a:hover {
+      color: #fff;
+    }
+    nav {
+      background: #004a8f;
+      text-align: center;
+      padding: 12px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-top: 10px;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 16px;
+      margin: 0 18px;
       font-weight: 600;
       font-size: 1em;
       transition: color 0.3s ease;
@@ -54,33 +72,45 @@
     }
     .container {
       max-width: 900px;
-      padding: 20px 15px 40px;
-      margin: 20px auto 70px;
+      padding: 20px 25px 40px 25px;
+      margin: 30px auto 70px;
       background: white;
       border-radius: 8px;
       box-shadow: 0 0 12px rgba(0,0,0,0.05);
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+    }
+    main {
+      grid-column: 1 / 2;
+    }
+    aside {
+      grid-column: 2 / 3;
+      border-left: 2px solid #e0e0e0;
+      padding-left: 20px;
     }
     section {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
     section h2 {
-      font-size: 2em;
+      font-size: 1.8em;
       color: #00529b;
       border-bottom: 3px solid #00529b;
       padding-bottom: 6px;
       display: inline-block;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       letter-spacing: 1px;
     }
     /* Summary/About */
     #about p {
       font-size: 1.1em;
+      color: #444;
       max-width: 700px;
       margin-bottom: 10px;
     }
     /* Skills */
     .skill-category {
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
     .skill-category strong {
       display: block;
@@ -96,7 +126,7 @@
     }
     /* Professional Experience */
     .job {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
     .job-title {
       font-weight: 700;
@@ -104,27 +134,27 @@
       color: #003f6d;
     }
     .job-subtitle {
-      font-size: 1em;
-      font-weight: 500;
-      color: #00529b;
-      margin-bottom: 8px;
+      font-size: 1.05em;
+      font-weight: 600;
+      color: #0066cc;
+      margin-bottom: 6px;
     }
     .job-dates {
       font-size: 0.9em;
       color: #666;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .job-info ul {
       list-style-type: disc;
       margin-left: 20px;
-      margin-bottom: 12px;
-      color: #444;
+      margin-bottom: 10px;
+      color: #555;
       font-size: 1em;
     }
     /* Projects */
     .project {
       background: #e9f0fa;
-      border-radius: 6px;
+      border-radius: 8px;
       padding: 15px 20px;
       margin-bottom: 18px;
       box-shadow: inset 0 0 10px #c7d5e7;
@@ -132,7 +162,7 @@
     .project-title {
       font-weight: 700;
       font-size: 1.1em;
-      color: #004080;
+      color: #003f6d;
       margin-bottom: 6px;
     }
     .project-desc {
@@ -140,16 +170,24 @@
       color: #2c3e50;
       line-height: 1.3;
     }
-    /* Contact */
-    #contact p, #contact a {
-      font-size: 1.05em;
-      color: #003f6d;
-      margin: 8px 0;
-      text-decoration: none;
+    /* Contact aside */
+    aside h2 {
+      margin-bottom: 15px;
+    }
+    aside p {
+      font-size: 1em;
+      color: #333;
+      margin-bottom: 8px;
       word-wrap: break-word;
     }
-    #contact a:hover {
+    aside a {
       color: #00529b;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    aside a:hover {
+      text-decoration: underline;
+      color: #003f6d;
     }
     /* Footer */
     footer {
@@ -159,17 +197,18 @@
       color: white;
       font-weight: 400;
       font-size: 0.9em;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-    /* For fixed footer, add bottom padding */
-    body {
-      padding-bottom: 50px;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
+
+<div class="contact-info">
+  Phone: +91 7013460961 |
+  Email: <a href="mailto:alisk3442@gmail.com">alisk3442@gmail.com</a> |
+  LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a>
+</div>
+
 <header>
   <h1>Shaik Mohamad Sharuk Ali</h1>
   <p>Senior Engineer | Frontend Developer & DevOps Engineer</p>
@@ -177,121 +216,46 @@
 
 <nav>
   <a href="#about">About</a>
-  <a href="#skills">Skills</a>
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <div class="container">
 
-<section id="about">
-  <h2>Summary</h2>
-  <p>Dynamic and results-driven Frontend Developer and DevOps Engineer with over 3 years of experience in developing, implementing, and managing scalable web applications and cloud infrastructures. Proficient in ReactJS, HTML5, CSS3, JavaScript, Node.js, Express.js and AWS, with a strong focus on CI/CD practices. Experienced in project management using Jira and collaboration on GitHub.</p>
-</section>
+  <main>
+    <section id="about">
+      <h2>Summary</h2>
+      <p>Dynamic and results-driven Frontend Developer and DevOps Engineer with over 3 years of experience in developing, implementing, and managing scalable web applications and cloud infrastructures. Proficient in ReactJS, HTML5, CSS3, JavaScript, Node.js, Express.js and AWS, with a strong focus on CI/CD practices. Experienced in project management using Jira and collaboration on GitHub.</p>
+    </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skill-category">
-    <strong>Project Management</strong>
-    <ul class="skills-list">
-      <li>GIT (version control), GitHub, GitLab, Jira</li>
-    </ul>
-  </div>
-  <div class="skill-category">
-    <strong>DevOps & Infrastructure</strong>
-    <ul class="skills-list">
-      <li>Docker, Kubernetes, AWS (EC2, S3, ELB, Route 53, IAM), Terraform, Ansible</li>
-    </ul>
-  </div>
-  <div class="skill-category">
-    <strong>CI/CD Tools</strong>
-    <ul class="skills-list">
-      <li>Jenkins, Azure DevOps</li>
-    </ul>
-  </div>
-  <div class="skill-category">
-    <strong>Frontend Development</strong>
-    <ul class="skills-list">
-      <li>ReactJS, HTML5, CSS3, JavaScript, Redux, NodeJS, Express JS, Axios, Bootstrap, MUI</li>
-    </ul>
-  </div>
-  <div class="skill-category">
-    <strong>Responsive Design</strong>
-    <ul class="skills-list">
-      <li>Bootstrap, Flexbox, CSS Grid</li>
-    </ul>
-  </div>
-  <div class="skill-category">
-    <strong>Additional Skills</strong>
-    <ul class="skills-list">
-      <li>Agile Methodology, SDLC, API Integration, Debugging, Problem-Solving</li>
-    </ul>
-  </div>
-</section>
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <div class="job">
+        <div class="job-title">Senior Engineer</div>
+        <div class="job-subtitle">Tata Elxsi, Bangalore, India</div>
+        <div class="job-dates">July 2021 – Present</div>
+        <div class="job-info">
+          <ul>
+            <li>Developed and maintained highly responsive and user-friendly web applications using ReactJS adhering to best practices for performance and scalability.</li>
+            <li>Implemented CI/CD pipelines (Jenkins, Azure DevOps) to automate software delivery and ensure consistent deployments.</li>
+            <li>Provisioned and configured AWS cloud infrastructure (EC2, S3, ELB, Route 53, IAM) for high availability and fault tolerance.</li>
+            <li>Collaborated with development teams to define and implement deployment best practices.</li>
+            <li>Applied Infrastructure as Code principles with Terraform and Ansible for repeatable infrastructure deployments.</li>
+            <li>Integrated third-party APIs and built reusable React components for efficient UI development.</li>
+            <li>Managed code version control using GitLab and championed agile methodologies.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<section id="experience">
-  <h2>Professional Experience</h2>
-
-  <div class="job">
-    <div class="job-title">Senior Engineer</div>
-    <div class="job-subtitle">Tata Elxsi, Bangalore, India</div>
-    <div class="job-dates">July 2021 – Present</div>
-    <div class="job-info">
-      <ul>
-        <li>Developed and maintained highly responsive and user-friendly web applications using ReactJS adhering to best practices for performance and scalability.</li>
-        <li>Implemented CI/CD pipelines (Jenkins, Azure DevOps) to automate software delivery and ensure consistent deployments.</li>
-        <li>Provisioned and configured AWS cloud infrastructure (EC2, S3, ELB, Route 53, IAM) for high availability and fault tolerance.</li>
-        <li>Collaborated with development teams to define and implement deployment best practices.</li>
-        <li>Applied Infrastructure as Code principles with Terraform and Ansible for repeatable infrastructure deployments.</li>
-        <li>Integrated third-party APIs and built reusable React components for efficient UI development.</li>
-        <li>Managed code version control using GitLab and championed agile methodologies.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-
-   <div class="project">
-    <div class="project-title">HPCP Development (Sep 2024 - Present)</div>
-    <div class="project-desc"> Built a web application using ReactJS, focusing on reusable components, API integration, and smooth user experience. Implemented routing, state management, and modern UI design.</div>
-  </div>
-
-  <div class="project">
-    <div class="project-title">TSL_CUBE Project (Aug 2023 - Sep 2024)</div>
-    <div class="project-desc">Deployed applications on-premises and AWS; implemented CI/CD pipelines for streamlined delivery. Provisioned, secured, and configured AWS infrastructure for high availability and deployment.</div>
-  </div>
-
-  <div class="project">
-    <div class="project-title">Process Digitalization Project - Industry 4.0 (Jan 2023 – Aug 2023)</div>
-    <div class="project-desc">Participated in requirement gathering, developed responsive UI and RESTful APIs.</div>
-  </div>
-
-  <div class="project">
-    <div class="project-title">Content Management System - AR/VR (May 2022 – Dec 2022)</div>
-    <div class="project-desc">Built reusable React components, integrated APIs, and managed application state with Redux.</div>
-  </div>
-
-  <div class="project">
-    <div class="project-title">Math Applet Development - Ed-Tech (Jul 2021 - Mar 2022)</div>
-    <div class="project-desc">Created an interactive math learning applet for children, including storyboard creation and version control using GitLab.</div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Phone: +91 7013460961</p>
-  <p>Email: <a href="mailto:alisk3442@gmail.com">alisk3442@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></p>
-</section>
-
-</div>
-
-<footer>
-  &copy; 2025 Shaik Mohamad Sharuk Ali. All rights reserved.
-</footer>
-
-</body>
-</html>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <div class="project-title">HPCP Development (Sep 2024 - Present)</div>
+        <div class="project-desc">Built a web application using ReactJS, focusing on reusable components, API integration, and smooth user experience. Implemented routing, state management, and modern UI design.</div>
+      </div>
+      <div class="project">
+        <div class="project-title">TSL_CUBE Project (Aug 2023 - Sep 2024)</div>
+        <div class="project-desc">Deployed applications on-premises and AWS; implemented CI/CD pipelines for streamlined delivery. Provisioned, secured
